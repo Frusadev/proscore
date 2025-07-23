@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build: 
+      context: .
+      args:
+        - GENAI_API_KEY=${GENAI_API_KEY}
+    ports:
+      - "${PORT}:3000"
+    environment:
+      - GENAI_API_KEY=${GENAI_API_KEY}
